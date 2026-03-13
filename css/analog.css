@@ -1,0 +1,10 @@
+#analogCanvas {
+	width: 100%;
+	height: 100%;
+}
+
+@media (max-width: 600px) {
+	#analogCanvas {
+		height: 420px;
+	}
+}
