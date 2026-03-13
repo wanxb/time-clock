@@ -45,6 +45,7 @@ body {
 .tabs {
 	display: flex;
 	gap: 10px;
+	flex-wrap: wrap;
 }
 
 .tab {
@@ -118,5 +119,10 @@ main {
 @media (max-width: 600px) {
 	.app {
 		padding: 8px 10px 14px;
+	}
+
+	.tab {
+		font-size: 13px;
+		padding: 6px 8px;
 	}
 }
