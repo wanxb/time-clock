@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>时间之窗</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="tabs" role="tablist" aria-label="时间模式切换">
+        <button class="tab active" data-tab="clock" role="tab" aria-selected="true" type="button">时钟</button>
+        <button class="tab" data-tab="wheel" role="tab" aria-selected="false" type="button">时间轮盘</button>
+        <button class="tab" data-tab="matrix" role="tab" aria-selected="false" type="button">时间矩阵</button>
+      </div>
+      <div class="controls">
+        <button id="fullscreen" type="button" aria-label="全屏切换">⛶</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="clock" class="page active" role="tabpanel">
+        <div class="row row1">
+          <div id="time" aria-live="polite"></div>
+        </div>
+
+        <div class="row row2">
+          <div id="solarDate"></div>
+          <div id="lunarDate"></div>
+          <div id="ganzhi"></div>
+        </div>
+
+        <div class="row row3">
+          <div id="extraInfo"></div>
+        </div>
+      </section>
+
+      <section id="wheel" class="page" role="tabpanel">
+        <canvas id="wheelCanvas"></canvas>
+      </section>
+
+      <section id="matrix" class="page" role="tabpanel">
+        <div id="matrixContainer"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="lunar.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
